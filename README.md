@@ -1,26 +1,3 @@
----
-title: Home Assistant Diagnostics Agent
-emoji: 🏠🔍
-colorFrom: blue
-colorTo: green
-sdk: gradio
-sdk_version: 6.0.0
-app_file: app.py
-pinned: false
-license: mit
-tags:
-  - mcp
-  - home-assistant
-  - diagnostics
-  - gemini
-  - openai
-  - llamaindex
-  - blaxel
-  - mcp-in-action-track-consumer
-  - smart-home
-  - ai-agent
----
-
 # 🏠🔍 Home Assistant Diagnostics Agent
 
 **Built for Hugging Face MCP's 1st Birthday Hackathon**
