@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "total_count": 8,
+  "entities": [
+    {"entity_id": "light.kitchen", "domain": "light", "friendly_name": "Kitchen Light"},
+    {"entity_id": "light.living_room", "domain": "light", "friendly_name": "Living Room Lamp"},
+    {"entity_id": "sensor.temperature_living_room", "domain": "sensor", "friendly_name": "Living Room Temperature"},
+    {"entity_id": "switch.garden_pump", "domain": "switch", "friendly_name": "Garden Pump"},
+    {"entity_id": "binary_sensor.garage_door", "domain": "binary_sensor", "friendly_name": "Garage Door"},
+    {"entity_id": "automation.kitchen_motion", "domain": "automation", "friendly_name": "Kitchen Motion"},
+    {"entity_id": "scene.kitchen_dinner", "domain": "scene", "friendly_name": "Kitchen Dinner Scene"},
+    {"entity_id": "climate.upstairs", "domain": "climate", "friendly_name": "Upstairs Thermostat"}
+  ]
+}

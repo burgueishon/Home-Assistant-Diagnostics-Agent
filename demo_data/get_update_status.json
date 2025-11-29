@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "total_updates_available": 5,
+  "core_updates": [
+    {
+      "entity_id": "update.home_assistant_core_update",
+      "friendly_name": "Home Assistant Core",
+      "installed_version": "2024.11.1",
+      "latest_version": "2024.11.3",
+      "release_url": "https://www.home-assistant.io/blog/2024/11/06/release-202411/"
+    }
+  ],
+  "addon_updates": [
+    {
+      "entity_id": "update.file_editor_update",
+      "friendly_name": "File Editor",
+      "installed_version": "5.6.0",
+      "latest_version": "5.7.0"
+    },
+    {
+      "entity_id": "update.mosquitto_broker_update",
+      "friendly_name": "Mosquitto Broker",
+      "installed_version": "6.2.1",
+      "latest_version": "6.3.0"
+    }
+  ],
+  "device_updates": [
+    {
+      "entity_id": "update.bedroom_sensor_firmware",
+      "friendly_name": "Bedroom Sensor Firmware",
+      "installed_version": "1.2.0",
+      "latest_version": "1.3.1"
+    },
+    {
+      "entity_id": "update.kitchen_light_firmware",
+      "friendly_name": "Kitchen Light Firmware",
+      "installed_version": "2.1.5",
+      "latest_version": "2.2.0"
+    }
+  ],
+  "up_to_date_count": 42
+}

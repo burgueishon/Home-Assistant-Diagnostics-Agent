@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "total_automations": 34,
+  "total_conflicts": 2,
+  "race_conditions": [
+    {
+      "entity_id": "light.living_room",
+      "severity": "medium",
+      "automations": [
+        "automation.motion_living_room",
+        "automation.schedule_living_room"
+      ],
+      "issue": "Multiple automations trigger on the same entity state change",
+      "recommendation": "Add conditions to prevent simultaneous execution or use mode: 'restart'"
+    }
+  ],
+  "potential_loops": [
+    {
+      "severity": "high",
+      "automations": [
+        "automation.climate_adjust_a",
+        "automation.climate_adjust_b"
+      ],
+      "path": "A triggers on temp → adjusts climate → B triggers on climate → adjusts temp → loop",
+      "recommendation": "Add rate limiting or conditions to break the loop"
+    }
+  ],
+  "conflicting_actions": [],
+  "unsafe_modes": [],
+  "recommendations": [
+    {
+      "priority": "high",
+      "issue": "Potential infinite loop detected between 2 automations",
+      "action": "Add conditions or rate limiting to prevent loop"
+    },
+    {
+      "priority": "medium",
+      "issue": "Race condition on light.living_room",
+      "action": "Use automation mode='restart' or add mutex logic"
+    }
+  ],
+  "timestamp": "2025-11-16T23:16:14.123436+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "total_entities": 417,
+  "total_orphans": 125,
+  "orphan_percentage": 30.0,
+  "orphans_by_domain": {
+    "sensor": 45,
+    "binary_sensor": 28,
+    "switch": 18,
+    "light": 12,
+    "automation": 8,
+    "script": 7,
+    "input_boolean": 4,
+    "input_number": 3
+  },
+  "orphan_entities": [
+    {
+      "entity_id": "sensor.unused_temperature",
+      "domain": "sensor",
+      "friendly_name": "Unused Temperature Sensor",
+      "state": "22.5",
+      "last_updated": "2025-11-16T16:50:02.818635+00:00"
+    },
+    {
+      "entity_id": "light.old_bedroom_light",
+      "domain": "light",
+      "friendly_name": "Old Bedroom Light",
+      "state": "off",
+      "last_updated": "2025-11-15T10:30:00.000000+00:00"
+    },
+    {
+      "entity_id": "automation.test_automation",
+      "domain": "automation",
+      "friendly_name": "Test Automation (not in use)",
+      "state": "on",
+      "last_updated": "2025-11-10T08:00:00.000000+00:00"
+    }
+  ],
+  "most_used_entities": [
+    {
+      "entity_id": "sensor.living_room_temperature",
+      "usage_count": 15,
+      "referenced_by": ["automation.climate_control", "script.morning_routine"]
+    },
+    {
+      "entity_id": "light.kitchen",
+      "usage_count": 12,
+      "referenced_by": ["automation.kitchen_motion", "scene.cooking"]
+    }
+  ],
+  "timestamp": "2025-11-16T23:16:06.214965+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "count": 3,
+  "errors": [
+    {
+      "timestamp": "2025-11-15T06:42:00+00:00",
+      "level": "ERROR",
+      "source": "automation.kitchen_motion",
+      "message": "Service light.turn_on failed: entity light.kitchen not available"
+    },
+    {
+      "timestamp": "2025-11-15T05:10:00+00:00",
+      "level": "WARNING",
+      "source": "sensor.pool_temperature",
+      "message": "Update took longer than 10s (8.4s)"
+    },
+    {
+      "timestamp": "2025-11-15T04:55:00+00:00",
+      "level": "ERROR",
+      "source": "recorder",
+      "message": "Database commit took 5.2s; check DB performance"
+    }
+  ]
+}

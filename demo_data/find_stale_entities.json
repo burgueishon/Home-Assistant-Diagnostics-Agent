@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "total_stale": 4,
+  "entities": [
+    {
+      "entity_id": "sensor.water_leak_under_sink",
+      "friendly_name": "Water Leak Under Sink",
+      "hours_stale": 26,
+      "last_updated": "2025-11-15T06:10:00+00:00"
+    },
+    {
+      "entity_id": "binary_sensor.garage_door",
+      "friendly_name": "Garage Door Sensor",
+      "hours_stale": 8,
+      "last_updated": "2025-11-15T00:45:00+00:00"
+    },
+    {
+      "entity_id": "sensor.pool_temperature",
+      "friendly_name": "Pool Temperature",
+      "hours_stale": 5,
+      "last_updated": "2025-11-15T04:00:00+00:00"
+    },
+    {
+      "entity_id": "sensor.server_room_humidity",
+      "friendly_name": "Server Room Humidity",
+      "hours_stale": 3,
+      "last_updated": "2025-11-15T06:45:00+00:00"
+    }
+  ],
+  "recommendations": [
+    "Check battery or power for leak and garage sensors.",
+    "Verify network reachability for pool and server room sensors.",
+    "Add a watchdog automation to alert when hours_stale > 2 for critical sensors."
+  ]
+}

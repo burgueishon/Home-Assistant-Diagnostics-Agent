@@ -1,0 +1,39 @@
+{
+  "success": true,
+  "mesh_health_score": 100.0,
+  "total_devices": 21,
+  "coordinator_info": {
+    "name": "Generic Zigbee Coordinator (EZSP)",
+    "manufacturer": "",
+    "model": "Generic Zigbee Coordinator (EZSP)",
+    "ieee": "7c:c6:b6:ff:fe:4a:35:18"
+  },
+  "statistics": {
+    "average_lqi": 244.7,
+    "average_rssi": -34.3,
+    "weak_links_count": 0,
+    "orphan_devices_count": 0
+  },
+  "lqi_distribution": {
+    "excellent (200-255)": 20,
+    "good (150-199)": 1,
+    "fair (120-149)": 0,
+    "poor (80-119)": 0,
+    "critical (<80)": 0
+  },
+  "weak_links": [],
+  "orphan_devices": [],
+  "power_source_distribution": {
+    "Mains": 11,
+    "Battery or Unknown": 10
+  },
+  "router_count": 11,
+  "recommendations": [
+    {
+      "priority": "low",
+      "issue": "Mesh health is excellent",
+      "action": "Continue monitoring mesh quality weekly"
+    }
+  ],
+  "timestamp": "2025-11-16T23:15:58.781840+00:00"
+}

@@ -1,0 +1,198 @@
+/* Fixed dark theme for entire app */
+:root {
+  --bg: #0c0d0f;
+  --panel: #121214;
+  --surface: #161617;
+  --border: #2a2a2c;
+  --text: #eaeaea;
+  --text-dim: #b8b8c2;
+  --accent: #ff7a00;
+  --accent-strong: #ff9a33;
+  --success: #22c55e;
+  --warn: #f59e0b;
+  color-scheme: only dark !important;
+}
+
+@media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+  html, body, .gradio-container, .gradio-app, .block, [class*="gr-"], .prose, .prose * {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+  }
+}
+
+html, body, .gradio-container, .gradio-app, .block, [class*="gr-"], .prose, .prose * {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: 'Inter', 'Roboto', system-ui, -apple-system, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 { color: var(--text) !important; font-weight: 600 !important; }
+p, span, label, li { color: var(--text) !important; }
+.secondary-text { color: var(--text-dim) !important; }
+a, a:visited { color: #4A9EFF !important; }
+a:hover { color: #7ab6ff !important; }
+
+/* Cards / panels */
+.gr-panel, .gr-box, .gr-card, .gr-group, .wrap, .component, .prose pre, .prose code {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+/* Tabs */
+.gradio-container .tab-nav { background: var(--bg) !important; border-bottom: 1px solid var(--border) !important; }
+.gradio-container .tab-nav button,
+.gradio-container .tabitem,
+.gradio-container button[role="tab"] {
+  color: #f7f7ff !important;
+  font-weight: 700 !important;
+  opacity: 0.95 !important;
+  filter: none !important; /* remove gradio grayscale on inactive tabs */
+}
+.gradio-container .tab-nav button:hover,
+.gradio-container .tabitem:hover,
+.gradio-container button[role="tab"]:hover {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+.gradio-container .tab-nav button.selected,
+.gradio-container .tabitem.selected,
+.gradio-container button[role="tab"][aria-selected="true"] {
+  color: #ffffff !important;
+  border-bottom: 2px solid var(--accent) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+.gradio-container .tab-nav button svg,
+.gradio-container button[role="tab"] svg {
+  color: #f7f7ff !important;
+  filter: none !important;
+  opacity: 0.95 !important;
+}
+
+/* Buttons */
+.gr-button { border-radius: 8px !important; font-weight: 600 !important; }
+.gr-button.primary { background: var(--accent) !important; color: var(--bg) !important; border: 1px solid var(--accent) !important; box-shadow: 0 0 0 1px var(--accent); }
+.gr-button.primary:hover { background: var(--accent-strong) !important; border-color: var(--accent-strong) !important; box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.35); }
+.gr-button.secondary, .gr-button:not(.primary) { background: var(--panel) !important; color: var(--text) !important; border: 1px solid var(--border) !important; }
+.gr-button.secondary:hover, .gr-button:not(.primary):hover { border-color: var(--accent); color: #fff !important; }
+
+/* Inputs */
+input, textarea, select, .gr-textbox, .gr-text-area, .gr-dropdown, .gradio-container input, .gradio-container textarea, .gradio-container select, .checkbox, .radio-item, .gr-radio, .gr-checkbox {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+}
+input:focus, textarea:focus, select:focus { outline: 1px solid var(--accent) !important; box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.25) !important; }
+input[type="radio"], input[type="checkbox"] { accent-color: var(--accent) !important; }
+.gradio-container input[type="radio"]:checked,
+input[type="radio"]:checked {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.25) !important;
+}
+.gradio-container input[type="radio"]:checked::after,
+input[type="radio"]:checked::after {
+  content: "" !important;
+  display: block !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 2px !important;
+  border-radius: 50% !important;
+  background: var(--accent) !important;
+}
+.gradio-container .radio, .gradio-container .radio label, .gradio-container .checkbox, .gradio-container .checkbox label {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Tables */
+table, thead, tbody, tr, th, td {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+tbody tr:nth-child(even) { background: #141416 !important; }
+tbody tr:nth-child(odd) { background: #101012 !important; }
+
+/* Chips / tags */
+.token, .tag, .chip, .multiselect-token, code {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+  padding: 2px 6px !important;
+}
+
+/* Chat */
+.gradio-chatbot, .message, .chat { background: var(--bg) !important; color: var(--text) !important; }
+.message.user { background: var(--panel) !important; border: 1px solid var(--accent) !important; }
+.message.bot { background: var(--surface) !important; border: 1px solid var(--border) !important; }
+.gradio-chatbot code, .gradio-chatbot pre { background: var(--panel) !important; color: var(--text) !important; }
+.gradio-chatbot .wrap, .gradio-chatbot .wrap .label, .gradio-chatbot .label {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Badges */
+.badge-gemini { background: var(--panel) !important; color: var(--text) !important; border-left: 6px solid var(--accent) !important; border: 1px solid var(--border) !important; padding: 6px 10px !important; border-radius: 10px !important; }
+.badge-fallback { background: var(--panel) !important; color: var(--text) !important; border-left: 6px solid #4A9EFF !important; border: 1px solid var(--border) !important; padding: 6px 10px !important; border-radius: 10px !important; }
+
+/* Tools timeline */
+.tools-timeline, .tools-timeline div {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* Labels */
+.gradio-container .label,
+.gradio-container .wrap .label,
+.gradio-container .block-label,
+label.block-label,
+.gradio-container .wrap > label,
+.gradio-container .label-wrap {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+  padding: 8px 10px !important;
+}
+
+/* Radio/segmented controls */
+.gradio-container .radio-group,
+.gradio-container .radio,
+.gradio-container .radio-item,
+.gradio-container .gr-radio,
+.gradio-container .gradio-radio {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+.gradio-container .radio-item label,
+.gradio-container .gr-radio label,
+.gradio-container .gradio-radio label {
+  color: var(--text) !important;
+}
+
+/* Markdown code blocks */
+.prose pre, .prose code {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--panel); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a3d; }

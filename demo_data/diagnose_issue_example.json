@@ -1,0 +1,94 @@
+{
+  "success": true,
+  "entity_id": "light.kitchen_main",
+  "entity_summary": {
+    "state": "unavailable",
+    "friendly_name": "Kitchen Main Light",
+    "domain": "light",
+    "device_class": null,
+    "last_updated": "2025-01-20T14:32:15.123456",
+    "last_changed": "2025-01-20T12:15:42.987654",
+    "attributes": {
+      "supported_color_modes": ["brightness", "color_temp"],
+      "device_id": "abc123def456",
+      "integration": "zigbee2mqtt"
+    }
+  },
+  "severity": "high",
+  "root_cause_candidates": [
+    {
+      "description": "Zigbee device lost connection to coordinator",
+      "confidence": 85,
+      "evidence": [
+        "Entity state is 'unavailable'",
+        "No state updates in last 2 hours",
+        "Device is Zigbee-based (zigbee2mqtt)",
+        "Other Zigbee devices in same area are responsive"
+      ]
+    },
+    {
+      "description": "Device power issue or battery depleted",
+      "confidence": 65,
+      "evidence": [
+        "Sudden state change from 'on' to 'unavailable'",
+        "No battery attribute found (likely mains-powered)",
+        "Device may need power cycle"
+      ]
+    },
+    {
+      "description": "Zigbee mesh network congestion",
+      "confidence": 45,
+      "evidence": [
+        "Multiple devices showing intermittent unavailability",
+        "Possible mesh network instability",
+        "Coordinator may be overloaded"
+      ]
+    }
+  ],
+  "recommended_fixes": [
+    "1. Check if device is powered on - toggle physical switch",
+    "2. Move device closer to Zigbee coordinator or router temporarily",
+    "3. Remove and re-add device in Zigbee2MQTT (last resort)",
+    "4. Check Zigbee2MQTT logs for connection errors",
+    "5. Verify Zigbee coordinator is functioning properly"
+  ],
+  "related_entities": [
+    {
+      "entity_id": "sensor.kitchen_motion",
+      "relation": "same_device",
+      "state": "unavailable"
+    },
+    {
+      "entity_id": "light.kitchen_cabinet",
+      "relation": "same_area",
+      "state": "on"
+    }
+  ],
+  "automation_impact": {
+    "total_automations_affected": 3,
+    "automations": [
+      {
+        "entity_id": "automation.kitchen_motion_lights",
+        "name": "Kitchen Motion Lights",
+        "impact": "Will not trigger - relies on this light"
+      },
+      {
+        "entity_id": "automation.good_morning_routine",
+        "name": "Good Morning Routine",
+        "impact": "Partially broken - this light won't turn on"
+      },
+      {
+        "entity_id": "automation.all_lights_off",
+        "name": "All Lights Off",
+        "impact": "Will attempt to control but fail silently"
+      }
+    ]
+  },
+  "historical_pattern": {
+    "last_7_days_uptime": "94.2%",
+    "similar_issues_count": 2,
+    "avg_unavailable_duration_minutes": 45,
+    "pattern": "Device occasionally disconnects, usually recovers within 1 hour"
+  },
+  "demo_mode": true
+}

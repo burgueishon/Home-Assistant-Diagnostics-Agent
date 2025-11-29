@@ -1,0 +1,64 @@
+{
+  "success": true,
+  "timestamp": "2025-11-16T23:20:00.000000+00:00",
+  "global_health_score": 85.5,
+  "overall_severity": "medium",
+  "severity_breakdown": {
+    "critical": 0,
+    "high": 2,
+    "medium": 5,
+    "low": 8
+  },
+  "issues_by_category": {
+    "entities": [
+      {
+        "severity": "medium",
+        "description": "15 entities are unavailable",
+        "entity_count": 15
+      }
+    ],
+    "batteries": [
+      {
+        "severity": "high",
+        "description": "2 devices have critical battery levels (<10%)",
+        "devices": ["sensor.motion_sensor_battery", "sensor.door_sensor_battery"]
+      }
+    ],
+    "updates": [
+      {
+        "severity": "low",
+        "description": "3 updates available",
+        "count": 3
+      }
+    ],
+    "logs_errors": [
+      {
+        "severity": "medium",
+        "description": "12 errors in last 24 hours",
+        "error_count": 12
+      }
+    ]
+  },
+  "category_summaries": {
+    "system": 0,
+    "network": 0,
+    "integrations": 0,
+    "devices": 0,
+    "entities": 1,
+    "batteries": 1,
+    "zigbee_mesh": 0,
+    "esphome": 0,
+    "logs_errors": 1,
+    "updates": 1
+  },
+  "total_issues": 15,
+  "diagnostics_used": [
+    "find_unavailable_entities",
+    "battery_report",
+    "get_repair_items",
+    "get_update_status",
+    "get_error_log",
+    "audit_zigbee_mesh"
+  ],
+  "diagnostics_count": 6
+}

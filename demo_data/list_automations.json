@@ -1,0 +1,29 @@
+{
+  "automations": [
+    {
+      "entity_id": "automation.kitchen_motion",
+      "alias": "Kitchen Motion Lights",
+      "state": "on"
+    },
+    {
+      "entity_id": "automation.bedroom_schedule",
+      "alias": "Bedroom Lights Schedule",
+      "state": "on"
+    },
+    {
+      "entity_id": "automation.low_battery_alert",
+      "alias": "Low Battery Notifications",
+      "state": "on"
+    },
+    {
+      "entity_id": "automation.climate_control",
+      "alias": "Smart Climate Control",
+      "state": "on"
+    },
+    {
+      "entity_id": "automation.security_alert",
+      "alias": "Security Door Alert",
+      "state": "on"
+    }
+  ]
+}

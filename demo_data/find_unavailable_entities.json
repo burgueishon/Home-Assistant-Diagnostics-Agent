@@ -1,0 +1,39 @@
+{
+  "success": true,
+  "total_unavailable": 15,
+  "by_domain": {
+    "light": [
+      {
+        "entity_id": "light.garage",
+        "friendly_name": "Garage Light",
+        "last_changed": "2025-11-14T10:00:00.000000+00:00"
+      },
+      {
+        "entity_id": "light.porch",
+        "friendly_name": "Porch Light",
+        "last_changed": "2025-11-13T15:30:00.000000+00:00"
+      }
+    ],
+    "sensor": [
+      {
+        "entity_id": "sensor.outdoor_temperature",
+        "friendly_name": "Outdoor Temperature",
+        "last_changed": "2025-11-15T08:00:00.000000+00:00"
+      }
+    ],
+    "switch": [
+      {
+        "entity_id": "switch.garden_pump",
+        "friendly_name": "Garden Pump",
+        "last_changed": "2025-11-10T12:00:00.000000+00:00"
+      }
+    ]
+  },
+  "domain_counts": {
+    "light": 2,
+    "sensor": 1,
+    "switch": 1,
+    "binary_sensor": 3,
+    "climate": 1
+  }
+}

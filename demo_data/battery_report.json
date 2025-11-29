@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "total_battery_entities": 18,
+  "low_battery_count": 3,
+  "critical_count": 1,
+  "low_battery": [
+    {
+      "entity_id": "sensor.motion_sensor_battery",
+      "friendly_name": "Motion Sensor Battery",
+      "level": 8,
+      "state": "8",
+      "last_updated": "2025-11-16T20:00:00.000000+00:00"
+    },
+    {
+      "entity_id": "sensor.door_sensor_battery",
+      "friendly_name": "Door Sensor Battery",
+      "level": 15,
+      "state": "15",
+      "last_updated": "2025-11-16T19:30:00.000000+00:00"
+    },
+    {
+      "entity_id": "sensor.window_sensor_battery",
+      "friendly_name": "Window Sensor Battery",
+      "level": 18,
+      "state": "18",
+      "last_updated": "2025-11-16T18:00:00.000000+00:00"
+    }
+  ],
+  "all_batteries": [
+    {
+      "entity_id": "sensor.motion_sensor_battery",
+      "level": 8
+    },
+    {
+      "entity_id": "sensor.door_sensor_battery",
+      "level": 15
+    },
+    {
+      "entity_id": "sensor.window_sensor_battery",
+      "level": 18
+    },
+    {
+      "entity_id": "sensor.remote_battery",
+      "level": 45
+    },
+    {
+      "entity_id": "sensor.button_battery",
+      "level": 68
+    }
+  ]
+}

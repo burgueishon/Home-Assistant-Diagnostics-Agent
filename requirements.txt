@@ -1,0 +1,19 @@
+# Core dependencies
+gradio>=6.0.0
+google-generativeai>=0.8.0
+
+# MCP client (for LIVE mode)
+mcp>=1.0.0
+websockets>=13.0
+
+# Utilities
+python-dotenv>=1.0.0
+httpx>=0.25.0
+pydantic>=2.0.0
+asyncio-atexit>=1.0.1
+openai>=1.55.3
+
+# Optional knowledge base (LlamaIndex)
+llama-index-core
+llama-index-readers-file
+llama-index-llms-openai

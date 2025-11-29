@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "automation_id": "automation.morning_routine",
+  "summary": "Demo analysis of a morning routine automation with overlapping triggers.",
+  "issues": [
+    {
+      "type": "race_condition",
+      "description": "Multiple triggers within 5 seconds can overlap when presence is detected at the same time as sunrise.",
+      "severity": "medium"
+    },
+    {
+      "type": "missing_condition",
+      "description": "No guard to skip when nobody is home.",
+      "severity": "low"
+    }
+  ],
+  "recommendations": [
+    "Add a condition `person.anyone_home == home` before actions.",
+    "Add a `for: 00:00:10` to motion trigger to avoid double fires.",
+    "Deduplicate actions with a choose block keyed on the trigger id."
+  ],
+  "trigger_summary": {
+    "count": 3,
+    "types": ["time", "motion", "sunrise"]
+  }
+}

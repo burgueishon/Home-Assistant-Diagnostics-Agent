@@ -1,0 +1,61 @@
+{
+  "success": true,
+  "total_consumption": 12.5,
+  "unit": "kWh",
+  "period_hours": 24,
+  "total_devices": 8,
+  "devices_with_data": 5,
+  "top_consumers": [
+    {
+      "entity_id": "sensor.air_conditioner_energy",
+      "friendly_name": "Air Conditioner",
+      "consumption": 5.2,
+      "percentage": 41.6
+    },
+    {
+      "entity_id": "sensor.water_heater_energy",
+      "friendly_name": "Water Heater",
+      "consumption": 3.8,
+      "percentage": 30.4
+    },
+    {
+      "entity_id": "sensor.refrigerator_energy",
+      "friendly_name": "Refrigerator",
+      "consumption": 2.1,
+      "percentage": 16.8
+    },
+    {
+      "entity_id": "sensor.washing_machine_energy",
+      "friendly_name": "Washing Machine",
+      "consumption": 1.0,
+      "percentage": 8.0
+    },
+    {
+      "entity_id": "sensor.office_pc_energy",
+      "friendly_name": "Office PC",
+      "consumption": 0.4,
+      "percentage": 3.2
+    }
+  ],
+  "cost_estimate": {
+    "period_cost": 1.88,
+    "energy_rate": 0.15,
+    "currency": "USD",
+    "daily_projection": 12.5,
+    "monthly_projection": 375.0,
+    "monthly_cost_projection": 56.25
+  },
+  "recommendations": [
+    {
+      "priority": "medium",
+      "issue": "Air conditioner consuming 41.6% of total energy",
+      "action": "Consider adjusting temperature setpoint or schedule"
+    },
+    {
+      "priority": "low",
+      "issue": "Water heater using 30.4% of energy",
+      "action": "Check insulation and consider timer-based operation"
+    }
+  ],
+  "timestamp": "2025-11-16T23:16:21.346962+00:00"
+}

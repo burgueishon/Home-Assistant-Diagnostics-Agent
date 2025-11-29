@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "entity": "light.kitchen",
+  "graph": {
+    "nodes": [
+      {"id": "light.kitchen", "type": "entity", "label": "Kitchen Light"},
+      {"id": "automation.kitchen_motion", "type": "automation", "label": "Kitchen Motion"},
+      {"id": "binary_sensor.kitchen_motion", "type": "sensor", "label": "Kitchen Motion"},
+      {"id": "scene.kitchen_dinner", "type": "scene", "label": "Kitchen Dinner Scene"}
+    ],
+    "edges": [
+      {"from": "binary_sensor.kitchen_motion", "to": "automation.kitchen_motion", "relation": "triggers"},
+      {"from": "automation.kitchen_motion", "to": "light.kitchen", "relation": "controls"},
+      {"from": "scene.kitchen_dinner", "to": "light.kitchen", "relation": "sets"}
+    ]
+  }
+}
